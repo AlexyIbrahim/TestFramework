@@ -10,7 +10,8 @@ let package = Package(
     products: [
         .library(
             name: "KindlySDK",
-            targets: ["KindlySDK"]),
+            targets: ["KindlySDK"]
+        ),
     ],
     dependencies: [
         .package(
@@ -54,15 +55,12 @@ let package = Package(
                     package: "SwiftyJSON",
                     condition: .when(platforms: [.iOS])
                 ),
-                .binaryTarget(
-                    name: "KindlySDK",
-                    path: "./Sources/KindlySDK.xcframework"
-                ),
             ],
             resources: [.process("Resources")]
         ),
         .testTarget(
             name: "KindlySDK-Tests",
-            dependencies: ["KindlySDK"]),
+            dependencies: ["KindlySDK"]
+        ),
     ]
 )
