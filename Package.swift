@@ -58,6 +58,10 @@ let package = Package(
             ],
             resources: [.process("Resources")]
         ),
+        .binaryTarget(
+            name: "KindlySDK",
+            path: "./Sources/KindlySDK.xcframework"
+        ),
         .testTarget(
             name: "KindlySDK-Tests",
             dependencies: ["KindlySDK"]
