@@ -56,7 +56,6 @@ let package = Package(
                     condition: .when(platforms: [.iOS])
                 ),
             ],
-            resources: [.process("Resources")]
         ),
         .binaryTarget(
             name: "KindlyFramework",
