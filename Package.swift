@@ -9,8 +9,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "KindlyFramework",
-            targets: ["KindlyFramework"]
+            name: "KindlySDK",
+            targets: ["KindlySDK", "KindlyFramework"]
         ),
     ],
     dependencies: [
@@ -32,9 +32,8 @@ let package = Package(
         ),
     ],
     targets: [
-        .binaryTarget(
-            name: "KindlyFramework",
-            path: "./Sources/KindlySDK.xcframework",
+        .target(
+            name: "KindlySDK",
             dependencies: [
                 .product(
                     name: "Starscream",
@@ -57,6 +56,11 @@ let package = Package(
                     condition: .when(platforms: [.iOS])
                 ),
             ],
+        ),
+        .binaryTarget(
+            name: "KindlyFramework",
+            path: "./Sources/artifacts/KindlySDK.xcframework",
+            dependencies: ["KindlySDK"],
         ),
     ]
 )
