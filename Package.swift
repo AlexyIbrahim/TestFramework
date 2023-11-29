@@ -3,14 +3,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "KindlySDK",
+    name: "KindlyFramework",
     platforms: [
         .iOS(.v12),
     ],
     products: [
         .library(
-            name: "KindlySDK",
-            targets: ["KindlySDK"]
+            name: "KindlyFramework",
+            targets: ["KindlyFramework", "KindlySDK"]
         ),
     ],
     dependencies: [
@@ -32,9 +32,8 @@ let package = Package(
         ),
     ],
     targets: [
-        .binaryTarget(
-            name: "KindlySDK",
-            path: "./Sources/KindlySDK.xcframework",
+        .target(
+            name: "KindlyFramework",
             dependencies: [
                 .product(
                     name: "Starscream",
@@ -59,9 +58,9 @@ let package = Package(
             ],
             resources: [.process("Resources")]
         ),
-        .testTarget(
-            name: "KindlySDK-Tests",
-            dependencies: ["KindlySDK"]
+        .binaryTarget(
+            name: "KindlySDK",
+            path: "./Sources/KindlySDK.xcframework"
         ),
     ]
 )
