@@ -34,6 +34,7 @@ let package = Package(
     targets: [
         .target(
             name: "KindlyDep",
+            path: "./Sources/KindlyDep",
             dependencies: [
                 .product(
                     name: "Starscream",
