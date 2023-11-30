@@ -55,7 +55,7 @@ let package = Package(
                     package: "SwiftyJSON",
                     condition: .when(platforms: [.iOS])
                 ),
-            ],
+            ]
         ),
         .binaryTarget(
             name: "KindlyFramework",
