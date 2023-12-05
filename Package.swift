@@ -57,6 +57,6 @@ let package = Package(
                 ),
             ]
         ),
-		.binaryTarget(name: "KindlyFramework", path: "./Sources/artifacts/KindlySDK.xcframework")
+		.binaryTarget(name: "KindlyFramework", path: "Sources/artifacts/KindlySDK.xcframework")
 	]
 )
