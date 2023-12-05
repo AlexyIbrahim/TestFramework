@@ -55,7 +55,8 @@ let package = Package(
                     package: "SwiftyJSON",
                     condition: .when(platforms: [.iOS])
                 ),
-            ]
+            ],
+			path: "Sources"
         ),
 //		.binaryTarget(name: "KindlyFramework", path: "Sources/artifacts/KindlySDK.xcframework")
 	]
