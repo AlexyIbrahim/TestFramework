@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "KindlySDK",
-            targets: ["KindlySDK", "KindlyFramework"]
+            targets: ["KindlySDK"]
         ),
     ],
     dependencies: [
