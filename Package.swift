@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "TestSPMFile",
-            targets: ["TestSPMFile"]
+            targets: ["TestSPMFile", "KindlyFramework"]
         ),
     ],
     dependencies: [
@@ -58,6 +58,6 @@ let package = Package(
             ],
 			path: "Sources"
         ),
-//		.binaryTarget(name: "KindlyFramework", path: "Sources/artifacts/KindlySDK.xcframework")
+		.binaryTarget(name: "KindlyFramework", path: "Sources/artifacts/KindlySDK.xcframework")
 	]
 )
