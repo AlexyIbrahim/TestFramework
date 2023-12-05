@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "TestSPMFile",
-            targets: ["TestSPMFile", "KindlyFramework"]
+            targets: ["TestSPMFile"]
         ),
     ],
     dependencies: [
@@ -55,8 +55,9 @@ let package = Package(
                     package: "SwiftyJSON",
                     condition: .when(platforms: [.iOS])
                 ),
-            ]
+            ],
+			path: "Sources"
         ),
-		.binaryTarget(name: "KindlyFramework", path: "Sources/artifacts/KindlySDK.xcframework")
+//		.binaryTarget(name: "KindlyFramework", path: "Sources/artifacts/KindlySDK.xcframework")
 	]
 )
