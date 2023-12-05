@@ -3,14 +3,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "KindlySDK",
+    name: "TestSPMFile",
     platforms: [
         .iOS(.v12),
     ],
     products: [
         .library(
-            name: "KindlySDK",
-            targets: ["KindlySDK"]
+            name: "TestSPMFile",
+            targets: ["TestSPMFile"]
         ),
     ],
     dependencies: [
@@ -33,7 +33,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "KindlySDK",
+            name: "TestSPMFile",
             dependencies: [
                 .product(
                     name: "Starscream",
